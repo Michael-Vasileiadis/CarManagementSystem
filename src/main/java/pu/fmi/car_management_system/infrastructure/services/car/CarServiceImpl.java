@@ -1,4 +1,7 @@
 package pu.fmi.car_management_system.infrastructure.services.car;
 
-public class CarServiceImpl {
+import org.springframework.stereotype.Service;
+
+@Service
+public class CarServiceImpl implements CarService {
 }
