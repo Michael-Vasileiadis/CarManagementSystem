@@ -78,10 +78,7 @@ public class GarageServiceImpl implements GarageService {
     @Transactional
     public GarageResponseModel update(Integer id, UpdateGarageModel updateGarageModel) {
         Garage garage = garageRepository.findById(id).orElseThrow(() -> new GarageNotFoundException(id));
-        updateStringFields(garage, updateGarageModel);
-        if (updateGarageModel.capacity() != null) {
-            garage.setCapacity(updateGarageModel.capacity());
-        }
+        updateGarageFields(garage, updateGarageModel);
         return new GarageResponseModel(garage.getId(), garage.getName(), garage.getLocation(), garage.getCity(), garage.getCapacity());
     }
 
@@ -99,17 +96,18 @@ public class GarageServiceImpl implements GarageService {
         }
     }
 
-    private void updateStringFields(Garage garage, UpdateGarageModel garageModel) {
+    private void updateGarageFields(Garage garage, UpdateGarageModel garageModel) {
         if (garageModel.name() != null) {
             garage.setName(garageModel.name());
         }
-
         if (garageModel.city() != null) {
             garage.setCity(garageModel.city());
         }
-
         if (garageModel.location() != null) {
             garage.setLocation(garageModel.location());
+        }
+        if (garageModel.capacity() != null) {
+            garage.setCapacity(garageModel.capacity());
         }
     }
 
