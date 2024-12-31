@@ -17,9 +17,9 @@ public interface GarageService {
 
     List<DailyAvailabilityReportModel> getDailyAvailabilityReport(Integer garageId, LocalDate startDate, LocalDate endDate);
 
-    GarageResponseModel create(CreateGarageModel dto);
+    GarageResponseModel create(CreateGarageModel createGarageModel);
 
-    GarageResponseModel update(Integer id, UpdateGarageModel dto);
+    GarageResponseModel update(Integer id, UpdateGarageModel createGarageModel);
 
     boolean delete(Integer id);
 }

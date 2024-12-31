@@ -37,13 +37,13 @@ public class GarageController {
     }
 
     @PostMapping
-    public GarageResponseModel create(@RequestBody CreateGarageModel createGarageDTO) {
-        return garageService.create(createGarageDTO);
+    public GarageResponseModel create(@RequestBody CreateGarageModel createGarageModel) {
+        return garageService.create(createGarageModel);
     }
 
     @PutMapping("/{id}")
-    public GarageResponseModel update(@PathVariable Integer id, @RequestBody UpdateGarageModel updateGarageDTO) {
-        return garageService.update(id, updateGarageDTO);
+    public GarageResponseModel update(@PathVariable Integer id, @RequestBody UpdateGarageModel updateGarageModel) {
+        return garageService.update(id, updateGarageModel);
     }
 
     @DeleteMapping("/{id}")
