@@ -10,4 +10,4 @@ CarManagementSystem project for Plovdiv University
 
 ### The java application is started with the following commands in the given order: 
 #### 1) mvn clean install
-#### 2) java -jar car-management-system.jar
+#### 2) java -jar target/car-management-system.jar
