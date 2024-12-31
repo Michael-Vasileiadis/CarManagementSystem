@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.4.1</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 
 	<groupId>pu.fmi</groupId>
@@ -46,6 +46,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>car-management-system</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -73,5 +74,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
